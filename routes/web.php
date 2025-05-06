@@ -42,7 +42,5 @@ Route::get('/cursos/{curso}/{categoria?}', function ($curso,$categoria = null) {
     if($categoria){
     return "Bienvenido al curso: $curso de la categoria $categoria";
     }else{
-        return "Bienvenido al curso: $curso
-
-    }
+        return "Bienvenido al curso: $curso";
 });
