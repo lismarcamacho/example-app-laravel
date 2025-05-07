@@ -1,12 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
+/*
 Route::get('/', function () {
     return view('welcome');
-});
+}); */
 
-
+Route::get('/', HomeController::class);
 
 Route::get('/cursos', function () {
     return"Bienvenido a la pagina de cursos";
@@ -43,4 +45,6 @@ Route::get('/cursos/{curso}/{categoria?}', function ($curso,$categoria = null) {
     return "Bienvenido al curso: $curso de la categoria $categoria";
     }else{
         return "Bienvenido al curso: $curso";
+    }
 });
+
