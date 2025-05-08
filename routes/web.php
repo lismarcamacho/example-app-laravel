@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CursoController;
 
 /*
 Route::get('/', function () {
@@ -10,13 +11,26 @@ Route::get('/', function () {
 
 Route::get('/', HomeController::class);
 
+Route::get('/cursos', [CursoController::class, 'index']);
+
+
+Route::get('/cursos/create', [CursoController::class, 'create']);
+
+Route::get('/cursos/{curso}', [CursoController::class, 'show']);
+
+/*
+
 Route::get('/cursos', function () {
     return"Bienvenido a la pagina de cursos";
-});
+});*/
+
+/*
 
 Route::get('/cursos/create', function () {
     return"En esta pagina podrás crear un curso";
 });
+
+*/
 
 ## definicion de la ruta contenido de curso
 
